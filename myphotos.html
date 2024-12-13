@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gallery - Lorraine Parreño</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background: #1f242d;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .gallery-title {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay i {
+            font-size: 30px;
+            color: #7cf03d;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #111;
+        }
+
+        .footer a {
+            color: #7cf03d;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .gallery-item img {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Lorraine</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="project.html">Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hobbies.html">Hobbies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="myphotos.html">My Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container py-5">
+        <h2 class="gallery-title">My Gallery</h2>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="gallery-item">
+                    <img src="images/home.jpg" alt="Photo 1">
+                    <div class="overlay">
+                        <a href="images/home.jpg" data-bs-toggle="modal" data-bs-target="#imageModal"><i class='bx bx-zoom-in'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="gallery-item">
+                    <img src="images/homee.jpg" alt="Photo 2">
+                    <div class="overlay">
+                        <a href="images/homee.jpg" data-bs-toggle="modal" data-bs-target="#imageModal"><i class='bx bx-zoom-in'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="gallery-item">
+                    <img src="images/photo (1).jpg" alt="Photo 3">
+                    <div class="overlay">
+                        <a href="images/photo (1).jpg" data-bs-toggle="modal" data-bs-target="#imageModal"><i class='bx bx-zoom-in'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="gallery-item">
+                    <img src="images/photo (2).jpg" alt="Photo 3">
+                    <div class="overlay">
+                        <a href="images/photo (2).jpg" data-bs-toggle="modal" data-bs-target="#imageModal"><i class='bx bx-zoom-in'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="gallery-item">
+                    <img src="images/photo (3).jpg" alt="Photo 3">
+                    <div class="overlay">
+                        <a href="images/photo (3).jpg" data-bs-toggle="modal" data-bs-target="#imageModal"><i class='bx bx-zoom-in'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="gallery-item">
+                    <img src="images/photo (4).jpg" alt="Photo 3">
+                    <div class="overlay">
+                        <a href="images/photo (4).jpg" data-bs-toggle="modal" data-bs-target="#imageModal"><i class='bx bx-zoom-in'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="gallery-item">
+                    <img src="images/photo (5).jpg" alt="Photo 3">
+                    <div class="overlay">
+                        <a href="images/photo (5).jpg" data-bs-toggle="modal" data-bs-target="#imageModal"><i class='bx bx-zoom-in'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="gallery-item">
+                    <img src="images/photo (6).jpg" alt="Photo 3">
+                    <div class="overlay">
+                        <a href="images/photo (6).jpg" data-bs-toggle="modal" data-bs-target="#imageModal"><i class='bx bx-zoom-in'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="gallery-item">
+                    <img src="images/photo (7).jpg" alt="Photo 3">
+                    <div class="overlay">
+                        <a href="images/photo (7).jpg" data-bs-toggle="modal" data-bs-target="#imageModal"><i class='bx bx-zoom-in'></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- More gallery items here -->
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="" id="modalImage" class="w-100" alt="Full view">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>This Site is Coded By <a href="https://github.com/Itsloreyn/final-project" target="_blank">Lorraine Parreño</a> and is open-sourced</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Script to update modal image source
+        const modalImage = document.getElementById('modalImage');
+        const links = document.querySelectorAll('.gallery-item .overlay a');
+
+        links.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                modalImage.src = this.href;
+            });
+        });
+    </script>
+</body>
+</html>
